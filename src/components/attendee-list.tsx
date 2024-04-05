@@ -12,10 +12,10 @@ export function AttendeeList() {
     <div className="flex flex-col gap-4">
       <div className="flex gap-3 items-center">
         <h1 className="text-2xl font-bold">Participantes</h1>
-        <div className="px-3 py-1.5 border border-white/10 rounded-lg text-sm w-72 flex items-center gap-3">
+        <div className="px-3 py-1.5 border border-white/10 rounded-lg w-72 flex items-center gap-3">
           <Search className="size-4 text-emerald-300" />
           <input
-            className=" bg-transparent flex-1 outline-none"
+            className=" bg-transparent flex-1 outline-none border-0 p-0 text-sm"
             placeholder="Buscar participantes..."
           />
         </div>
@@ -29,7 +29,10 @@ export function AttendeeList() {
                 style={{ width: 48 }}
                 className="py-3 px-4 text-sm font-semibold text-left"
               >
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  className="size-4 bg-black/20 rounded border border-white/10"
+                />
               </th>
               <th className="py-3 px-4 text-sm font-semibold text-left">
                 Código
@@ -53,7 +56,10 @@ export function AttendeeList() {
             {Array.from({ length: 8 }).map((_, i) => (
               <tr className="border-b border-white/10" key={i}>
                 <td className="py-3 px-4 text-sm text-zinc-300">
-                  <input type="checkbox" />
+                  <input
+                    type="checkbox"
+                    className="size-4 bg-black/20 rounded border border-white/10"
+                  />
                 </td>
                 <td className="py-3 px-4 text-sm text-zinc-300">123456</td>
                 <td className="py-3 px-4 text-sm text-zinc-300">
